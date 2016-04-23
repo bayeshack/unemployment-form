@@ -15,21 +15,24 @@
 .clearfix:after { clear: both; }
 
 body {
-	background: #26C281;
+	background: #BF0A30;
 	color: rgba(0,0,0,0.45);
 	font-size: 100%;
+	color:white;
 	line-height: 1.25;
 	font-family: 'Lato', Arial, sans-serif;
 }
 
 a {
-	color: rgba(0,0,0,0.25);
+	color: white;
 	text-decoration: none;
 	outline: none;
+	color:white;
 }
 
 a:hover, a:focus {
 	color: rgba(0,0,0,0.6);
+	color:white;
 }
 
 .codrops-header {
@@ -37,12 +40,14 @@ a:hover, a:focus {
 	padding: 3em 1em;
 	text-align: center;
 	color: rgba(0,0,0,0.35);
+	color:white;
 }
 
 .codrops-header h1 {
 	margin: 0;
 	font-weight: 400;
 	font-size: 2.5em;
+	color:white;
 }
 
 .codrops-header h1 span {
@@ -50,6 +55,7 @@ a:hover, a:focus {
 	padding: 0 0 0.6em 0.1em;
 	font-size: 0.6em;
 	opacity: 0.7;
+	color:white;
 }
 
 /* To Navigation Style */
@@ -59,6 +65,7 @@ a:hover, a:focus {
 	font-weight: 700;
 	font-size: 0.69em;
 	line-height: 2.2;
+	color:white;
 }
 
 .codrops-top a {
@@ -66,15 +73,18 @@ a:hover, a:focus {
 	padding: 0 1em;
 	text-decoration: none;
 	letter-spacing: 1px;
+	color:white;
 }
 
 .codrops-top span.right {
 	float: right;
+	color:white;
 }
 
 .codrops-top span.right a {
 	display: block;
 	float: left;
+	color:white;
 }
 
 .codrops-icon:before {
@@ -86,21 +96,25 @@ a:hover, a:focus {
 	font-family: 'codropsicons';
 	line-height: 1;
 	speak: none;
+	color:white;
 	-webkit-font-smoothing: antialiased;
 }
 
 .codrops-icon-drop:before {
 	content: "\e001";
+	color:white;
 }
 
 .codrops-icon-prev:before {
 	content: "\e004";
+	color:white;
 }
 
 section {
 	padding: 5em 2em 10em;
-	background: #2dcb89;
+	background: #002868;
 	text-align: center;
+	color:white;
 }
 
 section.related {
@@ -108,6 +122,7 @@ section.related {
 	background: #465650;
 	color: rgba(0,0,0,0.4);
 	font-size: 1.5em;
+	color:white;
 }
 
 .related > a {
@@ -119,10 +134,12 @@ section.related {
 	padding: 25px;
 	-webkit-transition: color 0.3s, border-color 0.3s;
 	transition: color 0.3s, border-color 0.3s;
+	color:white;
 }
 
 .related a:hover {
 	border-color: rgba(0,0,0,0.6);
+	color:white;
 }
 
 .related a img {
@@ -130,11 +147,13 @@ section.related {
 	opacity: 0.4;
 	-webkit-transition: opacity 0.3s;
 	transition: opacity 0.3s;
+	color:white;
 }
 
 .related a:hover img,
 .related a:active img {
 	opacity: 1;
+	color:white;
 }
 
 .related a h3 {
@@ -143,11 +162,12 @@ section.related {
 	max-width: 300px;
 	font-weight: 400;
 	font-size: 0.75em;
+	color:white;
 	text-align: left;
 }
 
 @media screen and (max-width: 44.75em) {
-	section { padding: 1em 2em; }
+	section { padding: 1em 2em; color:white; }
 }
 
 @media screen and (max-width: 25em) {

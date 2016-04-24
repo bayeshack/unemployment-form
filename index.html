@@ -27,20 +27,14 @@
 				<form id="theForm" class="simform">
 					<div class="simform-inner">
 						<ol class="questions">
-<!-- 							<li>
-								<span><label for="q1">Where do you live?</label></span>
-								<ul>
-									<li>
-										<input id="q1" placeholder="Address" name="q1" type="text"/>
-									</li>
-									<li>
-										<input id="q2" placeholder="Apt. #" name="q1" type="text"/>
-									</li>
-									<li>
-										<input id="q3" placeholder="Zipcode" name="q1" type="text"/>
-									</li>
-								</ul>
-							</li> -->
+							<li>
+								<span><label for="q1">What was your job?</label></span>
+								<input id="q1" name="q1" type="email"/>
+							</li>
+							<li>
+								<span><label for="q1">What's your email?</label></span>
+								<input id="q1" name="q1" type="email"/>
+							</li>
 							<li>
 								<span><label for="q2">What's your email?</label></span>
 								<input id="q2" name="q2" type="email"/>
@@ -108,16 +102,37 @@
 			    url += separator + 'client=turbojobs';
 
 			    jQuery.ajax({
-			    	headers: { 'Origin': 'turbo-domain' },
 			    	url: url,
 			    	success: callback
 			   	});
 			}
 
+			var zipcode = '94117';
+			var currentSoc = '10-00000';
+			var currentTitle = 'architect';
+
 			function parseXML(xml) {
 				occupationXml = xml.getElementsByTagName("occupation");
-				console.log(occupationXml);
-				debugger;
+				var occupationArray = [].slice.call(occupationXml);
+				var csvFormattedArray = []
+				csvFormattedArray.push(['zipcode', 'current_soc', 'current_title', 'related_soc', 'related_title']);
+				occupationArray.map( function (occupation) 	{
+					csvRow = [zipcode, currentSoc, currentTitle];
+					// Add related SOC
+					csvRow.push(occupation.childNodes[1].textContent);
+					// Add related Title
+					csvRow.push(occupation.childNodes[3].textContent);
+					csvFormattedArray.push(csvRow);
+				});
+
+				csvContent = '';
+				var csv = csvFormattedArray.map(function(d){
+				    return d.join();
+				}).join('\n');
+
+				// OK the csv is correct
+				// run bash python script
+
 			}
 		</script>
 	</body>

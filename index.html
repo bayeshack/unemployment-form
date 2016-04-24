@@ -21,7 +21,7 @@
 			<!-- Top Navigation -->
 			<header class="codrops-header">
 				<h1>Unemployment Form<span>Bayes Hack 2016</span></h1>
-				<button onclick='callService("online/search?keyword=architect", function(xml) { parseXML(xml) })'>Click me</button>
+				<button onclick='callService("online/search?keyword=Plumbers, Pipefitters, and Steamfitters", function(xml) { parseXML(xml) })'>Click me</button>
 			</header>
 			<section>
 				<form id="theForm" class="simform">
@@ -110,8 +110,8 @@
 			}
 
 			var zipcode = '94117';
-			var currentSoc = '10-00000';
-			var currentTitle = 'architect';
+			var currentSoc = '47-2152';
+			var currentTitle = 'Plumbers, Pipefitters, and Steamfitters';
 
 			function parseXML(xml) {
 				occupationXml = xml.getElementsByTagName("occupation");
@@ -127,10 +127,11 @@
 					csvFormattedArray.push(csvRow);
 				});
 
-				csvContent = '';
 				var csv = csvFormattedArray.map(function(d){
 				    return d.join();
 				}).join('\n');
+
+				console.log(csv);
 
 				// OK the csv is correct
 				// run bash python script

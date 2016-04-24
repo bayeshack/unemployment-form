@@ -18,8 +18,8 @@ def zip_to_msa(zip_code):
 	
 	#create dictionary mapping
 	dict_zip2msa 	= dict([line[0],line[1]] for line in arr_zip_msa)
-	dict_msa2name 	= dict([line[1],line[2]] for line in arr_zip_msa)
-	print dict_msa2name[dict_zip2msa[zip_code]], ' = '
+	#dict_msa2name 	= dict([line[1],line[2]] for line in arr_zip_msa)
+	#print dict_msa2name[dict_zip2msa[zip_code]], ' = '
 	return dict_zip2msa[zip_code]
 	
 	

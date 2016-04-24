@@ -16,31 +16,34 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	</head>
 	<body>
-		<button>
 		<div class="container">
 			<!-- Top Navigation -->
 			<header class="codrops-header">
 				<h1>Unemployment Form<span>Bayes Hack 2016</span></h1>
-				<button onclick='callService("online/search?keyword=Plumbers, Pipefitters, and Steamfitters", function(xml) { parseXML(xml) })'>Click me</button>
-			</header>
+<!-- 				<button onclick='callService("online/search?keyword=Plumbers, Pipefitters, and Steamfitters", function(xml) { parseXML(xml) })'>Click me</button>
+ -->			</header>
 			<section>
 				<form id="theForm" class="simform">
 					<div class="simform-inner">
 						<ol class="questions">
 							<li>
-								<span><label for="q1">What was your job?</label></span>
+								<span><label for="q1">Damn. Been fired?</label></span>
+								<input id="q1" name="q1" type="text"/>
+							</li>
+							<li>
+								<span><label for="q1">No worries. We'll file your unemployment benefits application and figure out what to do next.  What's your name?</label></span>
+								<input id="q1" name="q1" type="text"/>
+							</li>
+							<li>
+								<span><label for="q1">Alright. What's your email address?</label></span>
 								<input id="q1" name="q1" type="email"/>
 							</li>
 							<li>
-								<span><label for="q1">What's your email?</label></span>
-								<input id="q1" name="q1" type="email"/>
+								<span><label for="q2">Cool. What is your Metropolitan Area? [dropdown]</label></span>
+								<input id="q2" name="q2" type="text"/>
 							</li>
 							<li>
-								<span><label for="q2">What's your email?</label></span>
-								<input id="q2" name="q2" type="email"/>
-							</li>
-							<li>
-								<span><label for="q3">What time do you go to work?</label></span>
+								<span><label for="q3">What was your last job title? [dropdown]</label></span>
 								<input id="q3" name="q3" type="text"/>
 							</li>
 							<li>
@@ -48,7 +51,7 @@
 								<input id="q4" name="q4" type="text"/>
 							</li>
 							<li>
-								<span><label for="q5">What's your income?</label></span>
+								<span><label for="q5">What was your annual income?</label></span>
 								<input id="q5" name="q5" type="text"/>
 							</li>
 							<li>

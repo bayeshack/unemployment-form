@@ -27,11 +27,8 @@
 					<div class="simform-inner">
 						<ol class="questions">
 							<li>
-								<span><label for="q1">Damn. Been fired?</label></span>
-								<input id="q1" name="q1" type="text"/>
-							</li>
-							<li>
-								<span><label for="q1">No worries. We'll file your unemployment benefits application and figure out what to do next.  What's your name?</label></span>
+								<span><label for="q1">Damn. Been fired? No worries!</label></span>
+								<p>We'll file your unemployment benefits application and figure out what to do.</p><p>What's your name?</p>
 								<input id="q1" name="q1" type="text"/>
 							</li>
 							<li>
@@ -39,20 +36,20 @@
 								<input id="q1" name="q1" type="email"/>
 							</li>
 							<li>
-								<span><label for="q2">Cool. What is your Metropolitan Area? [dropdown]</label></span>
+								<span><label for="q2">Cool. What is your zipcode?</label></span>
 								<input id="q2" name="q2" type="text"/>
 							</li>
 							<li>
-								<span><label for="q3">What was your last job title? [dropdown]</label></span>
+								<span><label for="q3">What was your last job title?</label></span>
 								<input id="q3" name="q3" type="text"/>
-							</li>
-							<li>
-								<span><label for="q4">What's your age?</label></span>
-								<input id="q4" name="q4" type="text"/>
 							</li>
 							<li>
 								<span><label for="q5">What was your annual income?</label></span>
 								<input id="q5" name="q5" type="text"/>
+							</li>
+							<li>
+								<span><label for="q4">What's your age?</label></span>
+								<input id="q4" name="q4" type="text"/>
 							</li>
 							<li>
 								<span><label for="q6">What's your gender?</label></span>
@@ -84,8 +81,7 @@
 			new stepsForm( theForm, {
 				onSubmit : function( form ) {
 					// hide form
-					window.location.href = "file:///Users/jravel/Downloads/MinimalForm-master/graph.html";
-
+					window.location.href = "file:///Users/StedmanBlakeHood/Sites/friends/unemployment-form/graph.html"
 					classie.addClass( theForm.querySelector( '.simform-inner' ), 'hide' );
 
 					/*
@@ -96,7 +92,15 @@
 
 					// let's just simulate something...
 					var messageEl = theForm.querySelector( '.final-message' );
-					messageEl.innerHTML = 'Thank you! We\'ll be in touch.';
+					// messageEl.innerHTML = "<h3>We have discovered that your skills are in high demand in other areas!</h3><button><a href="file\:///Users/StedmanBlakeHood/Sites/friends/unemployment-form/graph.html" Find out where >></a></button>"
+					// <h1>We have discovered xthat your skills are in high demand in other areas!</h1><h2>Find out where:</h2>
+					// <ul>
+					// 	<li>In other similar occupations</li>
+					// 	<li>In other high growth industries</li>
+					// 	<li>In other geographic locations</li>
+					// 	<li>With some additional training</li>
+					// </ul>
+					// ";
 					classie.addClass( messageEl, 'show' );
 				}
 			} );
